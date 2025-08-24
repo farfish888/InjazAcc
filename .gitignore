@@ -1,0 +1,16 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.db
+*.sqlite
+*.sqlite3
+*.log
+logs/
+.cache/
+tmp/
+appsettings.Local.json
+appsettings.Secrets.json
+secrets.json
+publish/

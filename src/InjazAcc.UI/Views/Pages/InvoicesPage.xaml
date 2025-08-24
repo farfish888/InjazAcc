@@ -1,0 +1,54 @@
+<Page x:Class="InjazAcc.UI.Views.Pages.InvoicesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:vm="clr-namespace:InjazAcc.UI.ViewModels"
+      Title="الفواتير">
+<Grid Margin="8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Background="#1FFFFFFF" Padding="12" CornerRadius="12" Margin="4">
+            <StackPanel>
+                <TextBlock Text="إنشاء فاتورة" FontSize="18" FontWeight="Bold" Margin="0,0,0,12"/>
+                <TextBlock Text="العميل"/>
+                <TextBox Text="{Binding CustomerName, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <TextBlock Text="المبلغ (بدون ضريبة)" Margin="0,8,0,0"/>
+                <TextBox Text="{Binding Amount, UpdateSourceTrigger=PropertyChanged}" />
+
+                <TextBlock Text="رقم الفاتورة (اختياري)" Margin="0,8,0,0"/>
+                <TextBox Text="{Binding Number, UpdateSourceTrigger=PropertyChanged}" />
+
+                <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                    <TextBlock Text="VAT:" Margin="0,0,8,0"/>
+                    <TextBlock Text="{Binding Vat}"/>
+                    <TextBlock Text=" | الإجمالي:" Margin="16,0,8,0"/>
+                    <TextBlock Text="{Binding Total}"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                    <Button Content="إعادة حساب" Command="{Binding RecalcCommand}"/>
+                    <Button Content="حفظ + ترحيل" Command="{Binding SaveCommand}"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Column="1" Background="#1FFFFFFF" Padding="12" CornerRadius="12" Margin="4">
+            <StackPanel>
+                <TextBlock Text="قائمة آخر 50 فاتورة" FontSize="18" FontWeight="Bold" Margin="0,0,0,12"/>
+                <DataGrid ItemsSource="{Binding Items}" AutoGenerateColumns="False" IsReadOnly="True" Height="420">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="رقم" Binding="{Binding Number}"/>
+                        <DataGridTextColumn Header="تاريخ" Binding="{Binding Date}"/>
+                        <DataGridTextColumn Header="صافي" Binding="{Binding TotalExclVat}"/>
+                        <DataGridTextColumn Header="ضريبة" Binding="{Binding VatAmount}"/>
+                        <DataGridTextColumn Header="إجمالي" Binding="{Binding TotalInclVat}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <TextBlock Text="* عند الحفظ يتم توليد قيد يومية متوازن تلقائيًا" Margin="0,8,0,0"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>
