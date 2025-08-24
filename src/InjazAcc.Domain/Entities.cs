@@ -103,3 +103,18 @@ public class JournalLine
     [Column(TypeName = "decimal(18,2)")] public decimal Credit { get; set; }
     [MaxLength(200)] public string? Note { get; set; }
 }
+public class ExpenseVoucher
+{
+    public int Id { get; set; }
+    [MaxLength(30)] public string Number { get; set; } = string.Empty;
+    public DateTime Date { get; set; } = DateTime.Now;
+    [MaxLength(200)] public string Payee { get; set; } = string.Empty;
+    public int AccountId { get; set; } // حساب المصروف
+    public decimal AmountExclVat { get; set; }
+    public decimal VatRate { get; set; } = InjazAcc.Shared.Settings.DefaultVatRate;
+    public decimal VatAmount { get; set; }
+    public decimal TotalAmount { get; set; }
+    public PaymentMethod Method { get; set; } = PaymentMethod.Cash; // Cash/Bank
+    public int? BranchId { get; set; }
+    public int? CostCenterId { get; set; }
+}

@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using InjazAcc.Domain;
 
 namespace InjazAcc.Infrastructure;
@@ -15,6 +15,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
     public DbSet<InvoiceLine> InvoiceLines => Set<InvoiceLine>();
     public DbSet<JournalEntry> JournalEntries => Set<JournalEntry>();
     public DbSet<JournalLine> JournalLines => Set<JournalLine>();
+    public DbSet<ExpenseVoucher> Expenses => Set<ExpenseVoucher>();
 
     protected override void OnModelCreating(ModelBuilder b)
     {
@@ -23,3 +24,4 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
         b.Entity<JournalEntry>().HasMany(e => e.Lines).WithOne().HasForeignKey(l => l.EntryId);
     }
 }
+
