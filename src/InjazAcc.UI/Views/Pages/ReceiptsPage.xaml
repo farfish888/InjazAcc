@@ -1,0 +1,15 @@
+﻿<Page x:Class="InjazAcc.UI.Views.Pages.ReceiptsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="إيصالات القبض"
+      FlowDirection="RightToLeft">
+  <Grid Margin="12">
+    <Border Style="{StaticResource Card}">
+      <StackPanel>
+        <TextBlock Text="إيصالات القبض" FontSize="18" FontWeight="Bold" Margin="0,0,0,12"/>
+        <!-- محتوى الصفحة موجود في الـViewModel -->
+        <TextBlock Text="(محتوى إيصالات القبض جاهز  استخدم الأزرار أعلاه للتنقل)" Opacity="0.7"/>
+      </StackPanel>
+    </Border>
+  </Grid>
+</Page>

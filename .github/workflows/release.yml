@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 name: Release on tag
+=======
+﻿name: Release on tag
+>>>>>>> d6de209 (ci: auto-release on tag)
 
 on:
   push:
@@ -30,5 +34,8 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: InjazAcc_win-x64.zip
+<<<<<<< HEAD
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+=======
+>>>>>>> d6de209 (ci: auto-release on tag)

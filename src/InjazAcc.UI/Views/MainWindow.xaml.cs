@@ -1,16 +1,18 @@
-using System.Windows;
-using System.Windows.Controls;
+﻿using System.Windows;
 
-namespace InjazAcc.UI.Views;
-
-public partial class MainWindow : Window
+namespace InjazAcc.UI.Views
 {
-    public MainWindow()
+    public partial class MainWindow : Window
     {
-        InitializeComponent();
-        Loaded += (_, __) => MainFrame.Navigate(new Pages.InvoicesPage());
-    }
+        public MainWindow()
+        {
+            InitializeComponent();
+            Loaded += (_, __) => MainFrame.Navigate(new Pages.InvoicesPage());
+        }
 
-    private void Invoices_Click(object sender, RoutedEventArgs e) => MainFrame.Navigate(new Pages.InvoicesPage());
-    private void TrialBalance_Click(object sender, RoutedEventArgs e) => MainFrame.Navigate(new Pages.TrialBalancePage());
+        private void Invoices_Click(object sender, RoutedEventArgs e) => MainFrame.Navigate(new Pages.InvoicesPage());
+        private void Receipts_Click(object sender, RoutedEventArgs e) => MainFrame.Navigate(new Pages.ReceiptsPage());
+        private void Expenses_Click(object sender, RoutedEventArgs e) => MainFrame.Navigate(new Pages.ExpensesPage());
+        private void TrialBalance_Click(object sender, RoutedEventArgs e) => MainFrame.Navigate(new Pages.TrialBalancePage());
+    }
 }

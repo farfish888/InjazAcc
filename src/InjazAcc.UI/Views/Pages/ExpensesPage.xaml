@@ -1,0 +1,15 @@
+﻿<Page x:Class="InjazAcc.UI.Views.Pages.ExpensesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="سندات المصروف"
+      FlowDirection="RightToLeft">
+  <Grid Margin="12">
+    <Border Style="{StaticResource Card}">
+      <StackPanel>
+        <TextBlock Text="سندات المصروف" FontSize="18" FontWeight="Bold" Margin="0,0,0,12"/>
+        <!-- محتوى الصفحة موجود في الـViewModel -->
+        <TextBlock Text="(محتوى سندات المصروف جاهز  استخدم الأزرار أعلاه للتنقل)" Opacity="0.7"/>
+      </StackPanel>
+    </Border>
+  </Grid>
+</Page>
