@@ -1,4 +1,4 @@
-using InjazAcc.Domain;
+﻿using InjazAcc.Domain;
 using InjazAcc.Infrastructure;
 using InjazAcc.Shared;
 using Microsoft.EntityFrameworkCore;
@@ -50,3 +50,4 @@ public class PostingService(AppDbContext db)
         return Result.Ok($"Posted JE #{entry.Id}");
     }
 }
+

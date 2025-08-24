@@ -1,3 +1,5 @@
+![Build](https://github.com/farfish888/InjazAcc/actions/workflows/build.yml/badge.svg)
+![Latest Release](https://img.shields.io/github/v/release/farfish888/InjazAcc?display_name=tag)
 # InjazAcc — نظام محاسبي للحراسات (WPF .NET 8)
 
 **جاهز للرفع على GitHub**: مشروع WPF (MVVM) + EF Core + SQLite مع وحدات أساسية:
@@ -56,3 +58,7 @@ src/
 - إضافة وحدات: التحصيلات، المصروفات، الأصول، الرواتب، المطابقة البنكية.
 - توسيع التقارير: قائمة الدخل والميزانية، VAT (مخرجات/مدخلات).
 - ترقيم سلاسل المستندات وسياسات الصلاحيات وسجل التدقيق.
+
+![Build](https://github.com/farfish888/InjazAcc/actions/workflows/build.yml/badge.svg)
+
+

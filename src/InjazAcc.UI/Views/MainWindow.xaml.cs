@@ -14,3 +14,4 @@ public partial class MainWindow : Window
     private void Invoices_Click(object sender, RoutedEventArgs e) => MainFrame.Navigate(new Pages.InvoicesPage());
     private void TrialBalance_Click(object sender, RoutedEventArgs e) => MainFrame.Navigate(new Pages.TrialBalancePage());
 }
+    private void Receipts_Click(object sender, RoutedEventArgs e) => MainFrame.Navigate(new Pages.ReceiptsPage());

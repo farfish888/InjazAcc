@@ -103,3 +103,14 @@ public class JournalLine
     [Column(TypeName = "decimal(18,2)")] public decimal Credit { get; set; }
     [MaxLength(200)] public string? Note { get; set; }
 }
+public class Receipt
+{
+    public int Id { get; set; }
+    [MaxLength(30)] public string Number { get; set; } = string.Empty;
+    public DateTime Date { get; set; } = DateTime.Now;
+    public int CustomerId { get; set; }
+    public decimal Amount { get; set; }
+    public PaymentMethod Method { get; set; } = PaymentMethod.Cash;
+    public int? BranchId { get; set; }
+    public int? CostCenterId { get; set; }
+}
